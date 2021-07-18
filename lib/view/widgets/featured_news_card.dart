@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:readky/model/core/news.dart';
 import 'package:readky/view/utils/app_theme.dart';
+import 'package:readky/view/widgets/tag_card.dart';
 
 class FeaturedNewsCard extends StatelessWidget {
   final News data;
@@ -30,13 +31,8 @@ class FeaturedNewsCard extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.end,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Container(
-                  padding: EdgeInsets.symmetric(horizontal: 12, vertical: 4),
-                  decoration: BoxDecoration(color: Colors.white.withOpacity(0.5), borderRadius: BorderRadius.circular(5)),
-                  child: Text(
-                    'Movie',
-                    style: TextStyle(color: Colors.white),
-                  ),
+                TagCard(
+                  tagName: 'Movie',
                 ),
                 Container(
                   margin: EdgeInsets.only(top: 14, bottom: 12),
