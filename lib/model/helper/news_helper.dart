@@ -8,6 +8,9 @@ class NewsHelper {
 
   static List<News> recomendationNews =
       recomendationNewsRawData.map((data) => News(title: data['title'], photo: data['photo'], date: data['date'], author: data['author'], description: data['description'])).toList();
+
+  static List<News> allCategoriesNews =
+      allCategoriesNewsRawData.map((data) => News(title: data['title'], photo: data['photo'], date: data['date'], author: data['author'], description: data['description'])).toList();
 }
 
 var featuredNewsRawData = [
@@ -88,6 +91,49 @@ Malesuada proin libero nunc consequat interdum varius sit. Sollicitudin ac orci 
   {
     'title': "Naomi Osaka Barbie doll sells out shortly after launch.",
     'photo': 'assets/images/barbiebadminton.jpg',
+    'description':
+        r'''Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quisque non tellus orci ac auctor. Diam maecenas ultricies mi eget. Varius sit amet mattis vulputate enim nulla. Consectetur adipiscing elit duis tristique sollicitudin. Tellus mauris a diam maecenas sed enim ut sem. Feugiat in fermentum posuere urna nec. Quis imperdiet massa tincidunt nunc pulvinar sapien et ligula ullamcorper. Sed felis eget velit aliquet. Nunc sed blandit libero volutpat sed. Egestas congue quisque egestas diam in arcu cursus euismod quis. Scelerisque eu ultrices vitae auctor eu augue ut. Blandit aliquam etiam erat velit scelerisque in dictum non consectetur.
+        
+Malesuada proin libero nunc consequat interdum varius sit. Sollicitudin ac orci phasellus egestas. Ultrices sagittis orci a scelerisque purus semper eget duis. Suspendisse faucibus interdum posuere lorem ipsum dolor sit amet. Ultricies lacus sed turpis tincidunt id aliquet risus feugiat in. Nisl suscipit adipiscing bibendum est ultricies integer quis. Vestibulum lorem sed risus ultricies. Lectus vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare. Lacus sed viverra tellus in hac habitasse platea dictumst vestibulum. Volutpat consequat mauris nunc congue nisi. Nisl condimentum id venenatis a condimentum.''',
+    'date': 'Jul 14, 2021 ',
+    'author': 'anon anon'
+  },
+];
+
+var allCategoriesNewsRawData = [
+  {
+    'title': "A giant 3D cat has taken over one of Tokyo's biggest billboards.",
+    'photo': 'assets/images/cat3d.jpg',
+    'description':
+        r'''Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quisque non tellus orci ac auctor. Diam maecenas ultricies mi eget. Varius sit amet mattis vulputate enim nulla. Consectetur adipiscing elit duis tristique sollicitudin. Tellus mauris a diam maecenas sed enim ut sem. Feugiat in fermentum posuere urna nec. Quis imperdiet massa tincidunt nunc pulvinar sapien et ligula ullamcorper. Sed felis eget velit aliquet. Nunc sed blandit libero volutpat sed. Egestas congue quisque egestas diam in arcu cursus euismod quis. Scelerisque eu ultrices vitae auctor eu augue ut. Blandit aliquam etiam erat velit scelerisque in dictum non consectetur.
+        
+Malesuada proin libero nunc consequat interdum varius sit. Sollicitudin ac orci phasellus egestas. Ultrices sagittis orci a scelerisque purus semper eget duis. Suspendisse faucibus interdum posuere lorem ipsum dolor sit amet. Ultricies lacus sed turpis tincidunt id aliquet risus feugiat in. Nisl suscipit adipiscing bibendum est ultricies integer quis. Vestibulum lorem sed risus ultricies. Lectus vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare. Lacus sed viverra tellus in hac habitasse platea dictumst vestibulum. Volutpat consequat mauris nunc congue nisi. Nisl condimentum id venenatis a condimentum.''',
+    'date': 'Jul 14, 2021 ',
+    'author': 'anon anon'
+  },
+  {
+    'title': "Find out which countries are welcoming US tourists back.",
+    'photo': 'assets/images/pemandangan.jpg',
+    'description':
+        r'''Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quisque non tellus orci ac auctor. Diam maecenas ultricies mi eget. Varius sit amet mattis vulputate enim nulla. Consectetur adipiscing elit duis tristique sollicitudin. Tellus mauris a diam maecenas sed enim ut sem. Feugiat in fermentum posuere urna nec. Quis imperdiet massa tincidunt nunc pulvinar sapien et ligula ullamcorper. Sed felis eget velit aliquet. Nunc sed blandit libero volutpat sed. Egestas congue quisque egestas diam in arcu cursus euismod quis. Scelerisque eu ultrices vitae auctor eu augue ut. Blandit aliquam etiam erat velit scelerisque in dictum non consectetur.
+        
+Malesuada proin libero nunc consequat interdum varius sit. Sollicitudin ac orci phasellus egestas. Ultrices sagittis orci a scelerisque purus semper eget duis. Suspendisse faucibus interdum posuere lorem ipsum dolor sit amet. Ultricies lacus sed turpis tincidunt id aliquet risus feugiat in. Nisl suscipit adipiscing bibendum est ultricies integer quis. Vestibulum lorem sed risus ultricies. Lectus vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare. Lacus sed viverra tellus in hac habitasse platea dictumst vestibulum. Volutpat consequat mauris nunc congue nisi. Nisl condimentum id venenatis a condimentum.''',
+    'date': 'Jul 14, 2021 ',
+    'author': 'anon anon'
+  },
+  {
+    'title': "Naomi Osaka Barbie doll sells out shortly after launch.",
+    'photo': 'assets/images/barbiebadminton.jpg',
+    'description':
+        r'''Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quisque non tellus orci ac auctor. Diam maecenas ultricies mi eget. Varius sit amet mattis vulputate enim nulla. Consectetur adipiscing elit duis tristique sollicitudin. Tellus mauris a diam maecenas sed enim ut sem. Feugiat in fermentum posuere urna nec. Quis imperdiet massa tincidunt nunc pulvinar sapien et ligula ullamcorper. Sed felis eget velit aliquet. Nunc sed blandit libero volutpat sed. Egestas congue quisque egestas diam in arcu cursus euismod quis. Scelerisque eu ultrices vitae auctor eu augue ut. Blandit aliquam etiam erat velit scelerisque in dictum non consectetur.
+        
+Malesuada proin libero nunc consequat interdum varius sit. Sollicitudin ac orci phasellus egestas. Ultrices sagittis orci a scelerisque purus semper eget duis. Suspendisse faucibus interdum posuere lorem ipsum dolor sit amet. Ultricies lacus sed turpis tincidunt id aliquet risus feugiat in. Nisl suscipit adipiscing bibendum est ultricies integer quis. Vestibulum lorem sed risus ultricies. Lectus vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare. Lacus sed viverra tellus in hac habitasse platea dictumst vestibulum. Volutpat consequat mauris nunc congue nisi. Nisl condimentum id venenatis a condimentum.''',
+    'date': 'Jul 14, 2021 ',
+    'author': 'anon anon'
+  },
+  {
+    'title': 'Covid map: Coronavirus cases, deaths, vaccinations by country.',
+    'photo': 'assets/images/vaccin.jpg',
     'description':
         r'''Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quisque non tellus orci ac auctor. Diam maecenas ultricies mi eget. Varius sit amet mattis vulputate enim nulla. Consectetur adipiscing elit duis tristique sollicitudin. Tellus mauris a diam maecenas sed enim ut sem. Feugiat in fermentum posuere urna nec. Quis imperdiet massa tincidunt nunc pulvinar sapien et ligula ullamcorper. Sed felis eget velit aliquet. Nunc sed blandit libero volutpat sed. Egestas congue quisque egestas diam in arcu cursus euismod quis. Scelerisque eu ultrices vitae auctor eu augue ut. Blandit aliquam etiam erat velit scelerisque in dictum non consectetur.
         
