@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:readky/model/core/news.dart';
 import 'package:readky/model/core/video_news.dart';
+import 'package:readky/model/helper/news_helper.dart';
 import 'package:readky/model/helper/video_news_helper.dart';
 import 'package:readky/view/widgets/custom_app_bar.dart';
 import 'package:readky/view/widgets/featured_video_news_card.dart';
+import 'package:readky/view/widgets/news_tile.dart';
 import 'package:scroll_indicator/scroll_indicator.dart';
 
 class DiscoverPage extends StatefulWidget {
@@ -11,9 +14,30 @@ class DiscoverPage extends StatefulWidget {
   _DiscoverPageState createState() => _DiscoverPageState();
 }
 
-class _DiscoverPageState extends State<DiscoverPage> {
+class _DiscoverPageState extends State<DiscoverPage> with TickerProviderStateMixin {
   ScrollController _featuredVideoNewsCardScrollController = ScrollController();
+  TabController _categoryTabController;
   List<VideoNews> featuredVideoNews = VideoNewsHelper.featuredVideoNews;
+  List<News> allCategoriesNews = NewsHelper.allCategoriesNews;
+
+  @override
+  void initState() {
+    super.initState();
+    _categoryTabController = TabController(length: 7, vsync: this);
+  }
+
+  _changeTab(index) {
+    setState(() {
+      _categoryTabController.index = index;
+    });
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    _categoryTabController.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -43,6 +67,7 @@ class _DiscoverPageState extends State<DiscoverPage> {
       body: ListView(
         shrinkWrap: true,
         children: [
+          // Section 1 - Featured News Video
           Container(
             padding: EdgeInsets.symmetric(vertical: 16),
             width: MediaQuery.of(context).size.width,
@@ -95,6 +120,93 @@ class _DiscoverPageState extends State<DiscoverPage> {
                     ],
                   ),
                 )
+              ],
+            ),
+          ),
+
+          // Section 2 - News Based on Category
+          Container(
+            padding: EdgeInsets.symmetric(vertical: 8),
+            width: MediaQuery.of(context).size.width,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: EdgeInsets.only(bottom: 8),
+                  child: TabBar(
+                    isScrollable: true,
+                    controller: _categoryTabController,
+                    labelStyle: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+                    labelColor: Colors.black,
+                    unselectedLabelStyle: TextStyle(fontSize: 14, fontWeight: FontWeight.w400),
+                    unselectedLabelColor: Colors.black.withOpacity(0.6),
+                    indicatorColor: Colors.transparent,
+                    onTap: _changeTab,
+                    tabs: [
+                      Tab(
+                        text: 'All categories',
+                      ),
+                      Tab(
+                        text: 'Covid19',
+                      ),
+                      Tab(
+                        text: 'International',
+                      ),
+                      Tab(
+                        text: 'Europe',
+                      ),
+                      Tab(
+                        text: 'American',
+                      ),
+                      Tab(
+                        text: 'Asian',
+                      ),
+                      Tab(
+                        text: 'Sports',
+                      ),
+                    ],
+                  ),
+                ),
+                IndexedStack(
+                  index: _categoryTabController.index,
+                  children: [
+                    Container(
+                      width: MediaQuery.of(context).size.width,
+                      child: ListView.separated(
+                        padding: EdgeInsets.symmetric(horizontal: 16),
+                        scrollDirection: Axis.vertical,
+                        physics: NeverScrollableScrollPhysics(),
+                        shrinkWrap: true,
+                        itemCount: allCategoriesNews.length,
+                        separatorBuilder: (context, index) {
+                          return SizedBox(height: 16);
+                        },
+                        itemBuilder: (context, index) {
+                          return NewsTile(data: allCategoriesNews[index]);
+                        },
+                      ),
+                    ),
+                    SizedBox(
+                      child: Center(child: Text('category page ${_categoryTabController.index}')),
+                    ),
+                    SizedBox(
+                      child: Center(child: Text('category page ${_categoryTabController.index}')),
+                    ),
+                    SizedBox(
+                      child: Center(child: Text('category page ${_categoryTabController.index}')),
+                    ),
+                    SizedBox(
+                      child: Center(child: Text('category page ${_categoryTabController.index}')),
+                    ),
+                    SizedBox(
+                      child: Center(child: Text('category page ${_categoryTabController.index}')),
+                    ),
+                    SizedBox(
+                      child: Center(child: Text('category page ${_categoryTabController.index}')),
+                    ),
+                  ],
+                ),
               ],
             ),
           )
