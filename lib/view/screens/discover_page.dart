@@ -71,7 +71,7 @@ class _DiscoverPageState extends State<DiscoverPage> with TickerProviderStateMix
           Container(
             padding: EdgeInsets.symmetric(vertical: 16),
             width: MediaQuery.of(context).size.width,
-            height: 240,
+            height: 245,
             color: Colors.black,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
