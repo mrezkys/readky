@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:readky/model/core/news.dart';
 import 'package:readky/model/helper/news_helper.dart';
-import 'package:readky/view/utils/app_theme.dart';
 import 'package:readky/view/widgets/breaking_news_card.dart';
 import 'package:readky/view/widgets/custom_app_bar.dart';
 import 'package:readky/view/widgets/featured_news_card.dart';
