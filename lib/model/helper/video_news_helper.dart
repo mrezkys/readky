@@ -9,7 +9,7 @@ class VideoNewsHelper {
 var featredVideoNewsRawData = [
   {
     'title': "India vaccination: Six months on, India's vaccine drive is lagging.",
-    'video': '',
+    'video': 'https://assets.mixkit.co/videos/preview/mixkit-a-girl-blowing-a-bubble-gum-at-an-amusement-park-1226-large.mp4',
     'thumbnail': 'assets/images/vaccination.jpg',
     'description':
         r'''Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quisque non tellus orci ac auctor. Diam maecenas ultricies mi eget. Varius sit amet mattis vulputate enim nulla. Consectetur adipiscing elit duis tristique sollicitudin. Tellus mauris a diam maecenas sed enim ut sem. Feugiat in fermentum posuere urna nec. Quis imperdiet massa tincidunt nunc pulvinar sapien et ligula ullamcorper. Sed felis eget velit aliquet. Nunc sed blandit libero volutpat sed. Egestas congue quisque egestas diam in arcu cursus euismod quis. Scelerisque eu ultrices vitae auctor eu augue ut. Blandit aliquam etiam erat velit scelerisque in dictum non consectetur.
@@ -20,7 +20,7 @@ Malesuada proin libero nunc consequat interdum varius sit. Sollicitudin ac orci 
   },
   {
     'title': "Virgin Galactic: Richard Branson's long, winding path to space.",
-    'video': '',
+    'video': 'https://assets.mixkit.co/videos/preview/mixkit-a-girl-blowing-a-bubble-gum-at-an-amusement-park-1226-large.mp4',
     'thumbnail': 'assets/images/outerspace.jpg',
     'description':
         r'''Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quisque non tellus orci ac auctor. Diam maecenas ultricies mi eget. Varius sit amet mattis vulputate enim nulla. Consectetur adipiscing elit duis tristique sollicitudin. Tellus mauris a diam maecenas sed enim ut sem. Feugiat in fermentum posuere urna nec. Quis imperdiet massa tincidunt nunc pulvinar sapien et ligula ullamcorper. Sed felis eget velit aliquet. Nunc sed blandit libero volutpat sed. Egestas congue quisque egestas diam in arcu cursus euismod quis. Scelerisque eu ultrices vitae auctor eu augue ut. Blandit aliquam etiam erat velit scelerisque in dictum non consectetur.
