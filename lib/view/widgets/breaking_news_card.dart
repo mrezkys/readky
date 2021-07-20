@@ -17,14 +17,16 @@ class BreakingNewsCard extends StatelessWidget {
             width: 200,
             decoration: BoxDecoration(color: Colors.grey, borderRadius: BorderRadius.circular(10), image: DecorationImage(image: AssetImage(data.photo), fit: BoxFit.cover)),
           ),
-          Container(
-            margin: EdgeInsets.only(top: 12),
-            padding: EdgeInsets.only(left: 4),
-            child: Text(
-              data.title,
-              style: TextStyle(
-                fontWeight: FontWeight.w500,
-                height: 150 / 100,
+          Expanded(
+            child: Container(
+              margin: EdgeInsets.only(top: 12),
+              padding: EdgeInsets.only(left: 4),
+              child: Text(
+                data.title,
+                style: TextStyle(
+                  fontWeight: FontWeight.w500,
+                  height: 150 / 100,
+                ),
               ),
             ),
           ),
