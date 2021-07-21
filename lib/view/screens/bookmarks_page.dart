@@ -1,0 +1,121 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:readky/model/core/news.dart';
+import 'package:readky/model/core/video_news.dart';
+import 'package:readky/model/helper/news_helper.dart';
+import 'package:readky/model/helper/video_news_helper.dart';
+import 'package:readky/view/widgets/custom_app_bar.dart';
+import 'package:readky/view/widgets/featured_video_news_card.dart';
+import 'package:readky/view/widgets/news_tile.dart';
+
+class BookmarkPage extends StatefulWidget {
+  @override
+  _BookmarkPageState createState() => _BookmarkPageState();
+}
+
+class _BookmarkPageState extends State<BookmarkPage> with TickerProviderStateMixin {
+  TabController _bookmarkTabController;
+  List<News> news = NewsHelper.allCategoriesNews;
+
+  List<VideoNews> featuredVideoNews = VideoNewsHelper.featuredVideoNews;
+  @override
+  void initState() {
+    super.initState();
+    _bookmarkTabController = TabController(length: 2, vsync: this);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: CustomAppBar(
+        leadingIcon: SvgPicture.asset(
+          'assets/icons/Menu.svg',
+          color: Colors.white,
+        ),
+        onPressedLeading: () {},
+        title: Text(
+          'Bookmarks',
+          style: TextStyle(
+            fontWeight: FontWeight.w400,
+            fontSize: 16,
+          ),
+        ),
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: SvgPicture.asset(
+              'assets/icons/Search.svg',
+              color: Colors.white,
+            ),
+          ),
+        ],
+      ),
+      body: ListView(
+        shrinkWrap: true,
+        children: [
+          Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              TabBar(
+                controller: _bookmarkTabController,
+                labelColor: Colors.black,
+                indicatorColor: Colors.black,
+                labelStyle: TextStyle(fontSize: 16),
+                unselectedLabelStyle: TextStyle(fontSize: 16),
+                labelPadding: EdgeInsets.symmetric(vertical: 8),
+                indicatorWeight: 1.5,
+                onTap: (index) {
+                  setState(() {
+                    _bookmarkTabController.index = index;
+                  });
+                },
+                tabs: [
+                  Tab(
+                    text: 'News',
+                  ),
+                  Tab(
+                    text: 'Video',
+                  ),
+                ],
+              ),
+              IndexedStack(
+                index: _bookmarkTabController.index,
+                children: [
+                  Container(
+                    padding: EdgeInsets.symmetric(vertical: 20),
+                    width: MediaQuery.of(context).size.width,
+                    child: ListView.separated(
+                      padding: EdgeInsets.symmetric(horizontal: 16),
+                      scrollDirection: Axis.vertical,
+                      physics: NeverScrollableScrollPhysics(),
+                      shrinkWrap: true,
+                      itemCount: news.length,
+                      separatorBuilder: (context, index) {
+                        return SizedBox(height: 16);
+                      },
+                      itemBuilder: (context, index) {
+                        return NewsTile(data: news[index]);
+                      },
+                    ),
+                  ),
+                  Container(
+                    width: MediaQuery.of(context).size.width,
+                    child: GridView.count(
+                      crossAxisCount: 2,
+                      shrinkWrap: true,
+                      padding: EdgeInsets.symmetric(horizontal: 16, vertical: 20),
+                      mainAxisSpacing: 16,
+                      crossAxisSpacing: 16,
+                      children: List.generate(featuredVideoNews.length, (index) => FeaturedVideoNewsCard(data: featuredVideoNews[index])),
+                    ),
+                  ),
+                ],
+              )
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+}
