@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:readky/model/core/news.dart';
 import 'package:readky/model/helper/news_helper.dart';
+import 'package:readky/route/slide_page_route.dart';
+import 'package:readky/view/screens/profile_page.dart';
 import 'package:readky/view/widgets/breaking_news_card.dart';
 import 'package:readky/view/widgets/custom_app_bar.dart';
 import 'package:readky/view/widgets/featured_news_card.dart';
@@ -34,6 +36,9 @@ class _HomePageState extends State<HomePage> {
           'assets/images/pp.png',
           fit: BoxFit.cover,
         ),
+        onPressedProfilePicture: () {
+          Navigator.of(context).push(SlidePageRoute(child: ProfilePage()));
+        },
       ),
       body: ListView(
         shrinkWrap: true,
