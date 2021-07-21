@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:readky/view/screens/bookmarks_page.dart';
 import 'package:readky/view/screens/home_page.dart';
 import 'package:readky/view/screens/discover_page.dart';
 import 'package:readky/view/widgets/custom_bottom_navigation_bar.dart';
@@ -23,7 +24,7 @@ class _PageSwitchState extends State<PageSwitch> {
       body: [
         HomePage(),
         DiscoverPage(),
-        SizedBox(),
+        BookmarkPage(),
       ][_selectedIndex],
       bottomNavigationBar: CustomBottomNavigationBar(
         onItemTapped: _onItemTapped,
