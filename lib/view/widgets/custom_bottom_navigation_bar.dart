@@ -14,20 +14,20 @@ class CustomBottomNavigationBar extends StatefulWidget {
 class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
   BottomNavigationBarItem _bottomNavigationBarHomeItemBuilder() {
     return (widget.selectedIndex == 0)
-        ? BottomNavigationBarItem(icon: SvgPicture.asset('assets/icons/Home-filled.svg'), label: 'Home')
-        : BottomNavigationBarItem(icon: SvgPicture.asset('assets/icons/Home.svg'), label: 'Home');
+        ? BottomNavigationBarItem(icon: SvgPicture.asset('assets/icons/Home-filled.svg'), label: 'Home', backgroundColor: Colors.white)
+        : BottomNavigationBarItem(icon: SvgPicture.asset('assets/icons/Home.svg'), label: 'Home', backgroundColor: Colors.white);
   }
 
   BottomNavigationBarItem _bottomNavigationBarSearchItemBuilder() {
     return (widget.selectedIndex == 1)
-        ? BottomNavigationBarItem(icon: SvgPicture.asset('assets/icons/Search-filled.svg'), label: 'Home')
-        : BottomNavigationBarItem(icon: SvgPicture.asset('assets/icons/Search.svg'), label: 'Home');
+        ? BottomNavigationBarItem(icon: SvgPicture.asset('assets/icons/Search-filled.svg'), label: 'Home', backgroundColor: Colors.white)
+        : BottomNavigationBarItem(icon: SvgPicture.asset('assets/icons/Search.svg'), label: 'Home', backgroundColor: Colors.white);
   }
 
   BottomNavigationBarItem _bottomNavigationBarBookmarkItemBuilder() {
     return (widget.selectedIndex == 2)
-        ? BottomNavigationBarItem(icon: SvgPicture.asset('assets/icons/Bookmark-filled.svg'), label: 'Home')
-        : BottomNavigationBarItem(icon: SvgPicture.asset('assets/icons/Bookmark.svg'), label: 'Home');
+        ? BottomNavigationBarItem(icon: SvgPicture.asset('assets/icons/Bookmark-filled.svg'), label: 'Home', backgroundColor: Colors.white)
+        : BottomNavigationBarItem(icon: SvgPicture.asset('assets/icons/Bookmark.svg'), label: 'Home', backgroundColor: Colors.white);
   }
 
   @override
