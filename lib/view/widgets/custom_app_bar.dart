@@ -16,14 +16,17 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      brightness: Brightness.dark,
       backgroundColor: Colors.black,
       elevation: 0.0,
       centerTitle: true,
       title: title,
-      leading: IconButton(
-        icon: leadingIcon,
-        onPressed: onPressedLeading,
-      ),
+      leading: (leadingIcon != null)
+          ? IconButton(
+              icon: leadingIcon,
+              onPressed: onPressedLeading,
+            )
+          : null,
       actions: (profilePicture != null) ? [_buildProfilePicture(profilePicture)] : actions,
     );
   }
