@@ -4,6 +4,8 @@ import 'package:readky/model/core/news.dart';
 import 'package:readky/model/core/video_news.dart';
 import 'package:readky/model/helper/news_helper.dart';
 import 'package:readky/model/helper/video_news_helper.dart';
+import 'package:readky/route/slide_page_route.dart';
+import 'package:readky/view/screens/search_page.dart';
 import 'package:readky/view/widgets/custom_app_bar.dart';
 import 'package:readky/view/widgets/featured_video_news_card.dart';
 import 'package:readky/view/widgets/news_tile.dart';
@@ -56,7 +58,9 @@ class _DiscoverPageState extends State<DiscoverPage> with TickerProviderStateMix
         ),
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.of(context).push(SlidePageRoute(child: SearchPage(), direction: AxisDirection.up));
+            },
             icon: SvgPicture.asset(
               'assets/icons/Search.svg',
               color: Colors.white,
