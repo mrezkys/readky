@@ -4,9 +4,9 @@ import 'package:readky/view/screens/page_switch.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-    statusBarIconBrightness: Brightness.light,
     statusBarColor: Colors.black,
   ));
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(MyApp());
 }
 
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         scaffoldBackgroundColor: Colors.white,
       ),
-      home: SafeArea(child: PageSwitch()),
+      home: PageSwitch(),
     );
   }
 }
