@@ -11,7 +11,7 @@ class TagCard extends StatelessWidget {
       decoration: BoxDecoration(color: Colors.white.withOpacity(0.5), borderRadius: BorderRadius.circular(5)),
       child: Text(
         tagName,
-        style: TextStyle(color: Colors.white),
+        style: TextStyle(color: Colors.white, fontWeight: FontWeight.w500),
       ),
     );
   }

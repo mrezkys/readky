@@ -32,8 +32,9 @@ class NewsTile extends StatelessWidget {
                 Text(
                   data.title,
                   style: TextStyle(
-                    fontWeight: FontWeight.w500,
+                    fontWeight: FontWeight.w600,
                     height: 150 / 100,
+                    fontFamily: 'inter',
                   ),
                   maxLines: 2,
                   overflow: TextOverflow.ellipsis,
@@ -43,7 +44,11 @@ class NewsTile extends StatelessWidget {
                 ),
                 Text(
                   data.description,
-                  style: TextStyle(color: Colors.grey, fontSize: 12),
+                  style: TextStyle(
+                    color: Colors.grey,
+                    fontSize: 12,
+                    fontWeight: FontWeight.w400,
+                  ),
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                 )

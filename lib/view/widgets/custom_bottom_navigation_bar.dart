@@ -41,6 +41,7 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
         color: Colors.white,
       ),
       child: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
         elevation: 0,
         backgroundColor: Colors.white,
         currentIndex: widget.selectedIndex,

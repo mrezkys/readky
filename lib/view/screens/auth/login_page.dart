@@ -37,7 +37,7 @@ class _LoginPageState extends State<LoginPage> {
           children: [
             // Section 1 - Welcome Title
             Container(
-              margin: EdgeInsets.only(top: 30, bottom: 30),
+              margin: EdgeInsets.only(top: 30, bottom: 40),
               padding: EdgeInsets.symmetric(horizontal: 20),
               width: MediaQuery.of(context).size.width,
               child: Text(
@@ -72,10 +72,12 @@ class _LoginPageState extends State<LoginPage> {
               width: MediaQuery.of(context).size.width,
               height: 70,
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context).push(SlidePageRoute(child: PageSwitch()));
+                },
                 child: Text(
                   'Log in',
-                  style: TextStyle(color: Colors.black, fontWeight: FontWeight.w500, fontSize: 18),
+                  style: TextStyle(color: Colors.black, fontWeight: FontWeight.w600, fontSize: 18, fontFamily: 'inter'),
                 ),
                 style: ElevatedButton.styleFrom(
                   primary: Colors.white,
@@ -91,9 +93,7 @@ class _LoginPageState extends State<LoginPage> {
               width: MediaQuery.of(context).size.width,
               alignment: Alignment.topCenter,
               child: TextButton(
-                onPressed: () {
-                  Navigator.of(context).push(SlidePageRoute(child: PageSwitch()));
-                },
+                onPressed: () {},
                 child: Text('Forgot your password?'),
                 style: TextButton.styleFrom(
                   primary: Colors.white.withOpacity(0.65),

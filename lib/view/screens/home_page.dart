@@ -111,7 +111,11 @@ class _HomePageState extends State<HomePage> {
                     children: [
                       Text(
                         'Breaking News',
-                        style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w600,
+                          fontFamily: 'inter',
+                        ),
                       ),
                       ElevatedButton(
                         onPressed: () {},

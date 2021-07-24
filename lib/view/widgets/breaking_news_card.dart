@@ -24,8 +24,9 @@ class BreakingNewsCard extends StatelessWidget {
               child: Text(
                 data.title,
                 style: TextStyle(
-                  fontWeight: FontWeight.w500,
+                  fontWeight: FontWeight.w600,
                   height: 150 / 100,
+                  fontFamily: 'inter',
                 ),
               ),
             ),

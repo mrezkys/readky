@@ -49,8 +49,9 @@ class FeaturedNewsCard extends StatelessWidget {
                       style: TextStyle(
                         fontSize: 20,
                         height: 150 / 100,
-                        fontWeight: FontWeight.w500,
+                        fontWeight: FontWeight.w600,
                         color: Colors.white,
+                        fontFamily: 'inter',
                       ),
                     ),
                   ),

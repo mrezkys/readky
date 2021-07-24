@@ -141,9 +141,9 @@ class _DiscoverPageState extends State<DiscoverPage> with TickerProviderStateMix
                   child: TabBar(
                     isScrollable: true,
                     controller: _categoryTabController,
-                    labelStyle: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+                    labelStyle: TextStyle(fontSize: 16, fontWeight: FontWeight.w500, fontFamily: 'inter'),
                     labelColor: Colors.black,
-                    unselectedLabelStyle: TextStyle(fontSize: 14, fontWeight: FontWeight.w400),
+                    unselectedLabelStyle: TextStyle(fontSize: 14, fontWeight: FontWeight.w400, fontFamily: 'inter'),
                     unselectedLabelColor: Colors.black.withOpacity(0.6),
                     indicatorColor: Colors.transparent,
                     onTap: _changeTab,

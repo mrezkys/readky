@@ -35,12 +35,12 @@ class _RegisterPageState extends State<RegisterPage> {
           children: [
             // Section 1 - Welcome Title
             Container(
-              margin: EdgeInsets.only(top: 30, bottom: 30),
+              margin: EdgeInsets.only(top: 30, bottom: 40),
               padding: EdgeInsets.symmetric(horizontal: 20),
               width: MediaQuery.of(context).size.width,
               child: Text(
                 'Hello ! Register to get started 😁',
-                style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600, fontSize: 28, height: 150 / 100),
+                style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600, fontSize: 28, height: 150 / 100, fontFamily: 'inter'),
               ),
             ),
             // Section 2 - Form
@@ -82,7 +82,7 @@ class _RegisterPageState extends State<RegisterPage> {
                 onPressed: () {},
                 child: Text(
                   'Register',
-                  style: TextStyle(color: Colors.black, fontWeight: FontWeight.w500, fontSize: 18),
+                  style: TextStyle(color: Colors.black, fontWeight: FontWeight.w600, fontSize: 18),
                 ),
                 style: ElevatedButton.styleFrom(
                   primary: Colors.white,

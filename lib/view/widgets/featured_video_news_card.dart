@@ -45,8 +45,9 @@ class FeaturedVideoNewsCard extends StatelessWidget {
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 12,
-                          fontWeight: FontWeight.w500,
+                          fontWeight: FontWeight.w600,
                           height: 150 / 100,
+                          fontFamily: 'inter',
                         ),
                       ),
                     ),
@@ -75,7 +76,12 @@ class FeaturedVideoNewsCard extends StatelessWidget {
                 ),
                 Text(
                   'More Video',
-                  style: TextStyle(color: Colors.white.withOpacity(0.5), fontSize: 12),
+                  style: TextStyle(
+                    color: Colors.white.withOpacity(0.5),
+                    fontSize: 12,
+                    fontFamily: 'inter',
+                    fontWeight: FontWeight.w500,
+                  ),
                 ),
               ],
             ),

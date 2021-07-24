@@ -69,7 +69,7 @@ class _SwitchableButtonState extends State<SwitchableButton> {
                     duration: Duration(milliseconds: 500),
                     child: Text(
                       'Sign Up',
-                      style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+                      style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500, fontFamily: 'inter'),
                     ),
                   ),
                 ),
@@ -91,7 +91,7 @@ class _SwitchableButtonState extends State<SwitchableButton> {
                     style: TextStyle(color: (widget.activeLeft == false) ? widget.textColorActive : widget.textColor),
                     child: Text(
                       'Sign In',
-                      style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+                      style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500, fontFamily: 'inter'),
                     ),
                   ),
                 ),
