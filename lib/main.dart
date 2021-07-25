@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:readky/view/screens/page_switch.dart';
+import 'package:readky/view/screens/welcome_page.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
@@ -17,8 +17,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         scaffoldBackgroundColor: Colors.white,
+        fontFamily: 'open sans',
       ),
-      home: PageSwitch(),
+      home: WelcomePage(),
     );
   }
 }
