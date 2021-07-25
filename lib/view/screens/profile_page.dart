@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:readky/view/widgets/custom_app_bar.dart';
 import 'package:readky/view/widgets/profile_info_card.dart';
 
@@ -25,6 +24,7 @@ class ProfilePage extends StatelessWidget {
       ),
       body: ListView(
         shrinkWrap: true,
+        physics: BouncingScrollPhysics(),
         children: [
           //  Section 1 = Profile Info
           Container(
@@ -55,6 +55,7 @@ class ProfilePage extends StatelessWidget {
                         height: 150 / 100,
                         fontSize: 13,
                         fontWeight: FontWeight.w600,
+                        fontFamily: 'inter',
                       ),
                     ),
                   ),
@@ -115,7 +116,7 @@ class ProfilePage extends StatelessWidget {
       margin: EdgeInsets.only(bottom: 10, top: 15),
       child: Text(
         title,
-        style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+        style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, fontFamily: 'inter'),
       ),
     );
   }
@@ -142,7 +143,10 @@ class ProfilePage extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text(title),
+                    Text(
+                      title,
+                      style: TextStyle(fontFamily: 'inter', fontWeight: FontWeight.w500),
+                    ),
                     SizedBox(
                       height: 4,
                     ),

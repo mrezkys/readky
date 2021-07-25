@@ -34,7 +34,11 @@ class ProfileInfoCard extends StatelessWidget {
                 children: [
                   Text(
                     username,
-                    style: TextStyle(color: Colors.white),
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.w600,
+                      fontFamily: 'inter',
+                    ),
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
                   ),
@@ -43,7 +47,11 @@ class ProfileInfoCard extends StatelessWidget {
                   ),
                   Text(
                     subscriptionStatus,
-                    style: TextStyle(color: Colors.white.withOpacity(0.7), fontSize: 12),
+                    style: TextStyle(
+                      color: Colors.white.withOpacity(0.7),
+                      fontSize: 12,
+                      fontWeight: FontWeight.w400,
+                    ),
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
                   )
@@ -54,7 +62,10 @@ class ProfileInfoCard extends StatelessWidget {
               onPressed: () {},
               child: Text(
                 'Upgrade',
-                style: TextStyle(color: Colors.grey),
+                style: TextStyle(
+                  color: Colors.grey,
+                  fontWeight: FontWeight.w500,
+                ),
               ),
               style: ElevatedButton.styleFrom(
                   primary: Color(0xFF252525),
