@@ -6,6 +6,7 @@ import 'package:readky/route/slide_page_route.dart';
 import 'package:readky/view/screens/profile_page.dart';
 import 'package:readky/view/widgets/breaking_news_card.dart';
 import 'package:readky/view/widgets/custom_app_bar.dart';
+import 'package:readky/view/widgets/custom_side_bar.dart';
 import 'package:readky/view/widgets/featured_news_card.dart';
 import 'package:readky/view/widgets/news_tile.dart';
 import 'package:scroll_indicator/scroll_indicator.dart';
@@ -30,7 +31,9 @@ class _HomePageState extends State<HomePage> {
           'assets/icons/Menu.svg',
           color: Colors.white,
         ),
-        onPressedLeading: () {},
+        onPressedLeading: () {
+          Scaffold.of(context).openDrawer();
+        },
         title: SvgPicture.asset('assets/icons/appname.svg'),
         profilePicture: Image.asset(
           'assets/images/pp.png',
