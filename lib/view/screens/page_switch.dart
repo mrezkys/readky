@@ -3,6 +3,7 @@ import 'package:readky/view/screens/bookmarks_page.dart';
 import 'package:readky/view/screens/home_page.dart';
 import 'package:readky/view/screens/discover_page.dart';
 import 'package:readky/view/widgets/custom_bottom_navigation_bar.dart';
+import 'package:readky/view/widgets/custom_side_bar.dart';
 
 class PageSwitch extends StatefulWidget {
   @override
@@ -26,6 +27,7 @@ class _PageSwitchState extends State<PageSwitch> {
         DiscoverPage(),
         BookmarkPage(),
       ][_selectedIndex],
+      drawer: CustomSideBar(),
       bottomNavigationBar: CustomBottomNavigationBar(
         onItemTapped: _onItemTapped,
         selectedIndex: _selectedIndex,
