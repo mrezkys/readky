@@ -48,7 +48,9 @@ class _DiscoverPageState extends State<DiscoverPage> with TickerProviderStateMix
           'assets/icons/Menu.svg',
           color: Colors.white,
         ),
-        onPressedLeading: () {},
+        onPressedLeading: () {
+          Scaffold.of(context).openDrawer();
+        },
         title: Text(
           'Discover',
           style: TextStyle(
