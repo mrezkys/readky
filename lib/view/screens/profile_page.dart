@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:readky/view/widgets/custom_app_bar.dart';
 import 'package:readky/view/widgets/profile_info_card.dart';
 
@@ -94,13 +95,53 @@ class ProfilePage extends StatelessWidget {
               children: [
                 // Menu title - Account Settings
                 _buildMenuTitle(context, title: 'Account settings'),
-                _buildMenuTile(context, title: 'Your Profile', desciption: 'Edit and view profile info.'),
-                _buildMenuTile(context, title: 'My Subscription', desciption: 'Customize your subscription.'),
+                _buildMenuTile(
+                  context,
+                  title: 'Your Profile',
+                  desciption: 'Edit and view profile info.',
+                  icon: SvgPicture.asset(
+                    'assets/icons/Profile.svg',
+                    color: Colors.black,
+                  ),
+                ),
+                _buildMenuTile(
+                  context,
+                  title: 'My Subscription',
+                  desciption: 'Customize your subscription.',
+                  icon: SvgPicture.asset(
+                    'assets/icons/Ticket Star.svg',
+                    color: Colors.black,
+                  ),
+                ),
                 // Menu title - Account Settings
                 _buildMenuTitle(context, title: 'App Settings'),
-                _buildMenuTile(context, title: 'Notification', desciption: 'Edit and view profile info.'),
-                _buildMenuTile(context, title: 'My Time', desciption: 'Customize your subscription.'),
-                _buildMenuTile(context, title: 'Setting', desciption: 'Customize your subscription.'),
+                _buildMenuTile(
+                  context,
+                  title: 'Notification',
+                  desciption: 'Edit and view profile info.',
+                  icon: SvgPicture.asset(
+                    'assets/icons/Notification.svg',
+                    color: Colors.black,
+                  ),
+                ),
+                _buildMenuTile(
+                  context,
+                  title: 'My Time',
+                  desciption: 'Customize your subscription.',
+                  icon: SvgPicture.asset(
+                    'assets/icons/Time Circle.svg',
+                    color: Colors.black,
+                  ),
+                ),
+                _buildMenuTile(
+                  context,
+                  title: 'Setting',
+                  desciption: 'Customize your subscription.',
+                  icon: SvgPicture.asset(
+                    'assets/icons/Setting.svg',
+                    color: Colors.black,
+                  ),
+                ),
               ],
             ),
           )
@@ -121,7 +162,7 @@ class ProfilePage extends StatelessWidget {
     );
   }
 
-  Widget _buildMenuTile(BuildContext context, {@required String title, @required String desciption, Function onTap}) {
+  Widget _buildMenuTile(BuildContext context, {@required String title, @required String desciption, Function onTap, Widget icon}) {
     return InkWell(
       onTap: onTap,
       child: Container(
@@ -135,6 +176,7 @@ class ProfilePage extends StatelessWidget {
               width: 45,
               height: 45,
               decoration: BoxDecoration(borderRadius: BorderRadius.circular(100), color: Color(0xFFE5E5E5)),
+              child: Center(child: icon),
             ),
             Expanded(
               child: Container(
