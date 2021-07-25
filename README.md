@@ -8,4 +8,4 @@
 > Readky is created by [mrezkys](https://www.facebook.com/mrezkys12) and the user interface are designed by [mrezkys](https://www.facebook.com/mrezkys12)
 
 ## Announcement
-> Now Meracik is currently in development process.
+> Now Readky is currently in development process.
