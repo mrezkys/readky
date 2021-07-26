@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:readky/model/core/news.dart';
 import 'package:readky/model/helper/news_helper.dart';
 import 'package:readky/route/slide_page_route.dart';
+import 'package:readky/view/screens/breaking_news_page.dart';
 import 'package:readky/view/screens/profile_page.dart';
 import 'package:readky/view/widgets/breaking_news_card.dart';
 import 'package:readky/view/widgets/custom_app_bar.dart';
@@ -44,6 +45,7 @@ class _HomePageState extends State<HomePage> {
       ),
       body: ListView(
         shrinkWrap: true,
+        physics: BouncingScrollPhysics(),
         children: [
           // section 1 - Featured News
           Container(
@@ -120,7 +122,9 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ),
                       ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.of(context).push(SlidePageRoute(child: BreakingNewsPage()));
+                        },
                         child: Text(
                           'view more',
                           style: TextStyle(color: Colors.black, fontWeight: FontWeight.w400),

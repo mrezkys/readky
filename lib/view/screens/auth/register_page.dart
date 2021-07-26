@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:readky/route/slide_page_route.dart';
+import 'package:readky/view/screens/page_switch.dart';
 import 'package:readky/view/widgets/custom_text_field.dart';
 
 class RegisterPage extends StatefulWidget {
@@ -79,7 +81,9 @@ class _RegisterPageState extends State<RegisterPage> {
               width: MediaQuery.of(context).size.width,
               height: 70,
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context).push(SlidePageRoute(child: PageSwitch()));
+                },
                 child: Text(
                   'Register',
                   style: TextStyle(color: Colors.black, fontWeight: FontWeight.w600, fontSize: 18),

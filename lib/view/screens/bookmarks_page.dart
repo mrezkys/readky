@@ -57,6 +57,7 @@ class _BookmarkPageState extends State<BookmarkPage> with TickerProviderStateMix
         ],
       ),
       body: ListView(
+        physics: BouncingScrollPhysics(),
         shrinkWrap: true,
         children: [
           Column(

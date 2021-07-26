@@ -72,6 +72,7 @@ class _DiscoverPageState extends State<DiscoverPage> with TickerProviderStateMix
       ),
       body: ListView(
         shrinkWrap: true,
+        physics: BouncingScrollPhysics(),
         children: [
           // Section 1 - Featured News Video
           Container(

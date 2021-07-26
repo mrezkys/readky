@@ -37,16 +37,18 @@ class NewsDetailPage extends StatelessWidget {
       ),
       body: ListView(
         shrinkWrap: true,
+        physics: BouncingScrollPhysics(),
         children: [
           Container(
             width: MediaQuery.of(context).size.width,
             height: 240,
             decoration: BoxDecoration(
-                color: Colors.grey,
-                image: DecorationImage(
-                  image: AssetImage(data.photo),
-                  fit: BoxFit.cover,
-                )),
+              color: Colors.grey,
+              image: DecorationImage(
+                image: AssetImage(data.photo),
+                fit: BoxFit.cover,
+              ),
+            ),
           ),
           Container(
             width: MediaQuery.of(context).size.width,
@@ -63,12 +65,12 @@ class NewsDetailPage extends StatelessWidget {
                   margin: EdgeInsets.only(top: 12, bottom: 20),
                   child: Text(
                     data.title,
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600, height: 150 / 100),
+                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600, height: 150 / 100, fontFamily: 'inter'),
                   ),
                 ),
                 Text(
                   data.description,
-                  style: TextStyle(color: Colors.black.withOpacity(0.8), fontSize: 14, height: 150 / 100),
+                  style: TextStyle(color: Colors.black.withOpacity(0.8), fontSize: 14, height: 150 / 100, fontWeight: FontWeight.w500),
                 ),
               ],
             ),

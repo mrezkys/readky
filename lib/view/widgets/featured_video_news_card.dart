@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:readky/model/core/video_news.dart';
-import 'package:readky/route/slide_page_route.dart';
-import 'package:readky/view/screens/video_news_detail_page.dart';
 import 'package:readky/view/utils/app_theme.dart';
 import 'package:readky/view/widgets/tag_card.dart';
 
@@ -11,48 +9,42 @@ class FeaturedVideoNewsCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return (data.title != 'View More')
-        ? GestureDetector(
-            onTap: () {
-              print('object');
-              Navigator.of(context).push(SlidePageRoute(child: VideoNewsDetailPage(data: data), direction: AxisDirection.left));
-            },
+        ? Container(
+            height: 170,
+            width: 140,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(5),
+              color: Colors.grey,
+              image: DecorationImage(fit: BoxFit.cover, image: AssetImage(data.thumbnail)),
+            ),
             child: Container(
+              padding: EdgeInsets.symmetric(horizontal: 14, vertical: 14),
               height: 170,
               width: 140,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(5),
-                color: Colors.grey,
-                image: DecorationImage(fit: BoxFit.cover, image: AssetImage(data.thumbnail)),
-              ),
-              child: Container(
-                padding: EdgeInsets.symmetric(horizontal: 14, vertical: 14),
-                height: 170,
-                width: 140,
-                decoration: BoxDecoration(borderRadius: BorderRadius.circular(5), gradient: AppTheme.textOverlayGradient),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    TagCard(
-                      tagName: 'Video',
-                    ),
-                    Container(
-                      margin: EdgeInsets.only(top: 10),
-                      child: Text(
-                        data.title,
-                        maxLines: 4,
-                        overflow: TextOverflow.ellipsis,
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 12,
-                          fontWeight: FontWeight.w600,
-                          height: 150 / 100,
-                          fontFamily: 'inter',
-                        ),
+              decoration: BoxDecoration(borderRadius: BorderRadius.circular(5), gradient: AppTheme.textOverlayGradient),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.end,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  TagCard(
+                    tagName: 'Video',
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(top: 10),
+                    child: Text(
+                      data.title,
+                      maxLines: 4,
+                      overflow: TextOverflow.ellipsis,
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 12,
+                        fontWeight: FontWeight.w600,
+                        height: 150 / 100,
+                        fontFamily: 'inter',
                       ),
                     ),
-                  ],
-                ),
+                  ),
+                ],
               ),
             ),
           )

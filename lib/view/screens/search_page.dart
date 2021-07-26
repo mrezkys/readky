@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:readky/model/core/category.dart';
+import 'package:readky/model/core/news.dart';
 import 'package:readky/model/helper/category_helper.dart';
+import 'package:readky/model/helper/news_helper.dart';
+import 'package:readky/view/widgets/news_tile.dart';
 import 'package:readky/view/widgets/search_app_bar.dart';
 
 class SearchPage extends StatefulWidget {
@@ -11,6 +14,8 @@ class SearchPage extends StatefulWidget {
 class _SearchPageState extends State<SearchPage> {
   TextEditingController searchInputController = TextEditingController();
   List<Category> category = CategoryHelper.categoryData;
+  List<News> searchData = NewsHelper.searchNews;
+
   @override
   void dispose() {
     searchInputController.dispose();
@@ -62,7 +67,23 @@ class _SearchPageState extends State<SearchPage> {
                   );
                 },
               ),
-            )
+            ),
+            Container(
+              width: MediaQuery.of(context).size.width,
+              child: ListView.separated(
+                padding: EdgeInsets.symmetric(horizontal: 16, vertical: 20),
+                scrollDirection: Axis.vertical,
+                physics: NeverScrollableScrollPhysics(),
+                shrinkWrap: true,
+                itemCount: searchData.length,
+                separatorBuilder: (context, index) {
+                  return SizedBox(height: 16);
+                },
+                itemBuilder: (context, index) {
+                  return NewsTile(data: searchData[index]);
+                },
+              ),
+            ),
           ],
         ),
       ),
