@@ -86,7 +86,7 @@ class _RegisterPageState extends State<RegisterPage> {
                 },
                 child: Text(
                   'Register',
-                  style: TextStyle(color: Colors.black, fontWeight: FontWeight.w600, fontSize: 18),
+                  style: TextStyle(color: Colors.black, fontWeight: FontWeight.w600, fontSize: 16),
                 ),
                 style: ElevatedButton.styleFrom(
                   primary: Colors.white,
