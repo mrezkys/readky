@@ -5,6 +5,8 @@ import 'package:readky/view/screens/welcome_page.dart';
 void main() {
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
     statusBarColor: Colors.black,
+    systemNavigationBarColor: Colors.black,
+    systemNavigationBarIconBrightness: Brightness.dark,
   ));
   WidgetsFlutterBinding.ensureInitialized();
   runApp(MyApp());
