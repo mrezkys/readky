@@ -5,8 +5,8 @@
 Readky is a Free Flutter News App Starter Template that can help you develop a News application much faster. You just need to add some adjustment to the frontend and you can create your own backend.
 
 ## App Screenshot
-### Dribbble Post
-Go to the [Dribbble Post](https://dribbble.com/shots/16129400-News-App-Readky-Free-Flutter-Starter-Template)
+
+<img src="https://github.com/mrezkys/readky/blob/main/demo/banner.jpg" width="auto" height="auto" >
 <img src="https://github.com/mrezkys/readky/blob/main/demo/shot.jpg" width="auto" height="auto" >
 
 ## Whats inside
@@ -55,8 +55,16 @@ samples, guidance on mobile development, and a full API reference.
 
 ## About the Author
 
-Readky is created by [mrezkys](https://www.facebook.com/mrezkys12) and the user interface are designed by [mrezkys](https://www.facebook.com/mrezkys12)
+Readky is Developed by [mrezkys](https://www.facebook.com/mrezkys12)
+The User Interface are designed by [mrezkys](https://dribbble.com/mrezkys)
 
+## About the Author
+
+Readky is Developed by [mrezkys](https://www.facebook.com/mrezkys12)
+The User Interface are designed by [mrezkys](https://dribbble.com/mrezkys)
+
+## Thanks To
+Iconly, icons that i used on this project, created by [Piqo Design](https://www.figma.com/@piqodesign)
 
 ## Announcement
 
