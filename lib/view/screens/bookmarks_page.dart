@@ -7,8 +7,8 @@ import 'package:readky/model/helper/video_news_helper.dart';
 import 'package:readky/route/slide_page_route.dart';
 import 'package:readky/view/screens/search_page.dart';
 import 'package:readky/view/widgets/custom_app_bar.dart';
-import 'package:readky/view/widgets/featured_video_news_card.dart';
 import 'package:readky/view/widgets/news_tile.dart';
+import 'package:readky/view/widgets/video_news_card.dart';
 
 class BookmarkPage extends StatefulWidget {
   @override
@@ -17,7 +17,9 @@ class BookmarkPage extends StatefulWidget {
 
 class _BookmarkPageState extends State<BookmarkPage> with TickerProviderStateMixin {
   TabController _bookmarkTabController;
-  List<News> news = NewsHelper.allCategoriesNews;
+  List<News> news = NewsHelper.bookmarkedNews;
+
+  List<VideoNews> videoNews = VideoNewsHelper.bookmarkedVideoNews;
 
   List<VideoNews> featuredVideoNews = VideoNewsHelper.featuredVideoNews;
   @override
@@ -106,16 +108,19 @@ class _BookmarkPageState extends State<BookmarkPage> with TickerProviderStateMix
                       },
                     ),
                   ),
-                  Container(
-                    width: MediaQuery.of(context).size.width,
-                    child: GridView.count(
-                      crossAxisCount: 2,
-                      shrinkWrap: true,
-                      padding: EdgeInsets.symmetric(horizontal: 16, vertical: 20),
-                      mainAxisSpacing: 16,
-                      crossAxisSpacing: 16,
-                      children: List.generate(featuredVideoNews.length, (index) => FeaturedVideoNewsCard(data: featuredVideoNews[index])),
-                    ),
+                  GridView.count(
+                    crossAxisCount: 2,
+                    physics: NeverScrollableScrollPhysics(),
+                    shrinkWrap: true,
+                    padding: EdgeInsets.symmetric(horizontal: 16, vertical: 20),
+                    childAspectRatio: VideoNewsCard.itemWidth / VideoNewsCard.itemHeight,
+                    mainAxisSpacing: 16,
+                    crossAxisSpacing: 10,
+                    children: List.generate(videoNews.length, (index) {
+                      return VideoNewsCard(
+                        data: videoNews[index],
+                      );
+                    }),
                   ),
                 ],
               )
