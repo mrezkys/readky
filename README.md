@@ -58,11 +58,6 @@ samples, guidance on mobile development, and a full API reference.
 Readky is Developed by [mrezkys](https://www.facebook.com/mrezkys12)
 The User Interface are designed by [mrezkys](https://dribbble.com/mrezkys)
 
-## About the Author
-
-Readky is Developed by [mrezkys](https://www.facebook.com/mrezkys12)
-The User Interface are designed by [mrezkys](https://dribbble.com/mrezkys)
-
 ## Thanks To
 Iconly, icons that i used on this project, created by [Piqo Design](https://www.figma.com/@piqodesign)
 
