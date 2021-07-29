@@ -61,6 +61,13 @@ The User Interface are designed by [mrezkys](https://dribbble.com/mrezkys)
 ## Thanks To
 Iconly, icons that i used on this project, created by [Piqo Design](https://www.figma.com/@piqodesign)
 
+## License
+Readky is under MIT License.
+
+## Donate
+You can support me at [trakteer](https://trakteer.id/mrezkys) <br>
+<a href="https://trakteer.id/mrezkys" target="_blank"><img id="wse-buttons-preview" src="https://cdn.trakteer.id/images/embed/trbtn-red-5.png" height="45" style="border: 0px; height: 45px;" alt="Trakteer Saya"></a>
+
 ## Announcement
 
-Now Readky is currently in development process.
+Now Readky already relased v1.0.0
