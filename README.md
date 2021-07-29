@@ -8,7 +8,7 @@ Readky is a Free Flutter News App Starter Template that can help you develop a N
 
 <img src="https://github.com/mrezkys/readky/blob/main/demo/banner.jpg" width="auto" height="auto" >
 <img src="https://github.com/mrezkys/readky/blob/main/demo/shot.jpg" width="auto" height="auto" >
-<img src="https://github.com/mrezkys/readky/blob/main/demo/appdetail.jpg" width="auto" height="auto" >
+<img src="https://github.com/mrezkys/readky/blob/main/demo/details.jpg" width="auto" height="auto" >
 
 ## Whats inside
 
