@@ -25,7 +25,7 @@ Readky is a Free Flutter News App Starter Template that can help you develop a N
 - News Detail Page
 - Search Page
 - Profile Page
-
+--------
 - News Tile Widget
 - Featured News Card Widget
 - Breaking News Card Widget
